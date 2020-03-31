@@ -1,13 +1,8 @@
 import React from "react"
-
-import "./App.css"
+import Container from "./Container"
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Nat Sufrin</h1>
-    </div>
-  )
+  return <Container />
 }
 
 export default App

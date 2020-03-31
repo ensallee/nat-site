@@ -1,0 +1,65 @@
+.mainListContainer {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+.poetryContainer {
+  display: none;
+  position: absolute;
+  padding: 10px 0 0 0;
+  right: 0;
+  left: 0;
+}
+
+.visible {
+  display: block;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li:hover {
+  color: red;
+}
+
+li:not(:first-child) {
+  margin-left: 10px;
+}
+
+li:not(:first-child)::before {
+  content: "";
+  height: 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .poetryContainer {
+    position: relative;
+    padding: 10px 0 10px 15px;
+  }
+
+  li {
+    display: block;
+    text-align: left;
+  }
+
+  li:not(:first-child) {
+    margin-left: 0;
+  }
+
+  li:not(:first-child)::before {
+    content: "";
+    height: 0;
+    border: none;
+    margin-right: 0;
+  }
+}
