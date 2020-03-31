@@ -43,7 +43,7 @@ export default function Menu(props) {
 
   return (
     <div className={style.menu}>
-      <h1>Nat Sufrin</h1>
+      <h1 className={style.natSufrin}>Nat Sufrin</h1>
       <ul className={style.mainListContainer}>
         <li
           onClick={() => setPoetryVisible(!poetryVisible)}

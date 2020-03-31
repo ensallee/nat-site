@@ -2,8 +2,14 @@
   height: 25vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
+  margin: 30px 0 0 0;
+}
+
+.natSufrin {
+  font-family: "Abel", sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .mainListContainer {
@@ -27,6 +33,7 @@
 
 li {
   display: inline;
+  cursor: pointer;
 }
 
 li a {
@@ -53,6 +60,9 @@ li:not(:first-child)::before {
   .menu {
     height: 100vh;
     min-width: 25vw;
+    display: block;
+    text-align: left;
+    margin: 20px 0 0 25px;
   }
 
   .poetryContainer {
@@ -63,6 +73,7 @@ li:not(:first-child)::before {
   li {
     display: block;
     text-align: left;
+    margin: 15px 0;
   }
 
   li:not(:first-child) {
