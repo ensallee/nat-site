@@ -5,3 +5,14 @@
   padding: 0;
   box-sizing: inherit;
 }
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .mainContainer {
+    flex-direction: row;
+  }
+}

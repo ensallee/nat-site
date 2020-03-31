@@ -1,0 +1,23 @@
+.imageContainer {
+  width: 100vw;
+  height: 100vw;
+}
+
+.imageContainer img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .galleryContainer {
+    width: 75vw;
+    max-height: 100vh;
+  }
+
+  .imageContainer {
+    width: 75%;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+}

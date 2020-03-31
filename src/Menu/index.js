@@ -35,34 +35,58 @@ const PoetryList = [
   }
 ]
 
-export default function Menu() {
+export default function Menu(props) {
   const [poetryVisible, setPoetryVisible] = useState(false)
   const [psychVisibe, setPsychVisible] = useState(false)
 
+  const { setSelected } = props
+
   return (
-    <div>
+    <div className={style.menu}>
       <h1>Nat Sufrin</h1>
       <ul className={style.mainListContainer}>
-        <li onClick={() => setPoetryVisible(!poetryVisible)}>Poetry</li>
-        <ul
-          className={classnames(
-            style.poetryContainer,
-            poetryVisible && style.visible
-          )}
+        <li
+          onClick={() => setPoetryVisible(!poetryVisible)}
+          onMouseEnter={() => setSelected("Poetry")}
+          onMouseLeave={() => setSelected("Default")}
         >
-          {PoetryList.map(pub => {
-            return (
-              <li>
-                <a href={pub.link} target="_blank" rel="noopener noreferrer">
-                  {pub.name}
-                </a>
-              </li>
-            )
-          })}
-        </ul>
-        <li onClick={() => setPsychVisible(true)}>Psychology</li>
-        <li>C.V.</li>
-        <li>Contact</li>
+          Poetry
+          <ul
+            className={classnames(
+              style.poetryContainer,
+              poetryVisible && style.visible
+            )}
+          >
+            {PoetryList.map(pub => {
+              return (
+                <li>
+                  <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                    {pub.name}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        </li>
+        <li
+          onClick={() => setPsychVisible(true)}
+          onMouseEnter={() => setSelected("Psychology")}
+          onMouseLeave={() => setSelected("Default")}
+        >
+          Psychology
+        </li>
+        <li
+          onMouseEnter={() => setSelected("C.V.")}
+          onMouseLeave={() => setSelected("Default")}
+        >
+          C.V.
+        </li>
+        <li
+          onMouseEnter={() => setSelected("Contact")}
+          onMouseLeave={() => setSelected("Default")}
+        >
+          Contact
+        </li>
       </ul>
     </div>
   )

@@ -1,3 +1,11 @@
+.menu {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .mainListContainer {
   list-style: none;
   padding: 0;
@@ -42,6 +50,11 @@ li:not(:first-child)::before {
 }
 
 @media (min-width: 768px) {
+  .menu {
+    height: 100vh;
+    min-width: 25vw;
+  }
+
   .poetryContainer {
     position: relative;
     padding: 10px 0 10px 15px;
