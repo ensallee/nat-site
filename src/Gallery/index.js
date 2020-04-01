@@ -4,11 +4,12 @@ import candyAndFlowers from "../media/candy_and_flowers.JPG"
 import screamingToast from "../media/screaming_toast.JPG"
 import TV from "../media/tv.JPG"
 import accessories from "../media/accessories.JPG"
+import nat from "../media/nat.JPG"
 import style from "./style.module.css"
 
 const ImageMap = {
-  Default: whiteBuilding,
-  Poetry: candyAndFlowers,
+  Default: nat,
+  Poetry: whiteBuilding,
   Psychology: screamingToast,
   "C.V.": TV,
   Contact: accessories

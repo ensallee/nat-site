@@ -36,62 +36,74 @@ const PoetryList = [
 ]
 
 export default function Menu(props) {
-  const [poetryVisible, setPoetryVisible] = useState(false)
-  const [psychVisibe, setPsychVisible] = useState(false)
+  const [visibleItem, setVisibleItem] = useState(null)
 
   const { setSelected } = props
 
+  const handleSelection = (e, value, func) => {
+    e.stopPropagation()
+    func(value)
+  }
+
   return (
-    <div className={style.flexContainer}>
+    <div className={style.flexContainer} onClick={() => setVisibleItem(null)}>
       <div className={style.menu}>
         <h1 className={style.natSufrin}>nat sufrin</h1>
         <ul className={style.mainListContainer}>
           <li
-            onClick={() => setPoetryVisible(!poetryVisible)}
-            onMouseEnter={() => setSelected("Poetry")}
-            onMouseLeave={() => setSelected("Default")}
+            onClick={e =>
+              handleSelection(e, e.target.innerText, setVisibleItem)
+            }
+            onMouseEnter={e =>
+              handleSelection(e, e.target.innerText, setSelected)
+            }
+            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
           >
             Poetry
-            <ul
-              className={classnames(
-                style.poetryContainer,
-                poetryVisible && style.visible
-              )}
-            >
-              {PoetryList.map(pub => {
-                return (
-                  <li>
-                    <a
-                      href={pub.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {pub.name}
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
           </li>
           <li
-            onClick={() => setPsychVisible(true)}
-            onMouseEnter={() => setSelected("Psychology")}
-            onMouseLeave={() => setSelected("Default")}
+            onClick={e =>
+              handleSelection(e, e.target.innerText, setVisibleItem)
+            }
+            onMouseEnter={e =>
+              handleSelection(e, e.target.innerText, setSelected)
+            }
+            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
           >
             Psychology
           </li>
           <li
-            onMouseEnter={() => setSelected("C.V.")}
-            onMouseLeave={() => setSelected("Default")}
+            onMouseEnter={e =>
+              handleSelection(e, e.target.innerText, setSelected)
+            }
+            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
           >
             C.V.
           </li>
           <li
-            onMouseEnter={() => setSelected("Contact")}
-            onMouseLeave={() => setSelected("Default")}
+            onMouseEnter={e =>
+              handleSelection(e, e.target.innerText, setSelected)
+            }
+            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
           >
             Contact
           </li>
+          <ul
+            className={classnames(
+              style.poetryContainer,
+              visibleItem === "Poetry" && style.visible
+            )}
+          >
+            {PoetryList.map(pub => {
+              return (
+                <li>
+                  <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                    {pub.name}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
         </ul>
       </div>
     </div>
