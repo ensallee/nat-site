@@ -5,20 +5,17 @@ import style from "./style.module.css"
 const PoetryList = [
   {
     name: "Antioch Review",
-    link:
-      "https://www.jstor.org/stable/10.7723/antiochreview.73.1.0081?seq=1#page_scan_tab_contents"
-  }, //TODO: fix broken link
+    link: "http://review.antiochcollege.edu/winter-2015"
+  },
   {
     name: "Blaze Vox",
     link:
       "http://www.blazevox.org/BX%20Covers/BXspring14/Nat%20Sufrin%20-%20Spring%2014.pdf"
   },
   { name: "Dialogist", link: "https://dialogist.org/v1i4-nat-sufrin/" },
-  { name: "Fence", link: "#" }, //TODO: add Fence link
-  { name: "InDigest", link: "#" }, //TODO: is this the one that didn't happen?
   {
-    name: "inter/rupture",
-    link: "http://interrupture.com/archives/oct_2015/nat_sufrin/"
+    name: "Fence",
+    link: "https://reader.exacteditions.com/issues/80349/spread/1"
   },
   { name: "Imperial Matters", link: "http://imperialmatters.com/nat-sufrin/" },
   {
@@ -31,9 +28,15 @@ const PoetryList = [
   },
   {
     name: "TriQuarterly",
-    link: "http://www.triquarterly.org/issues/issue-141/nina-we-pretty"
+    link: "https://www.triquarterly.org/contributors/nat-sufrin"
   }
 ]
+
+//TODO: psych links
+//TODO: CV
+//TODO: about section
+//TODO: contact
+//TODO: make it so that when you click on a menu item, that photo remains.
 
 export default function Menu(props) {
   const [visibleItem, setVisibleItem] = useState(null)
@@ -97,7 +100,13 @@ export default function Menu(props) {
             }
             onMouseLeave={e => handleSelection(e, "Default", setSelected)}
           >
-            Contact
+            <a
+              href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=nwsufrin@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact
+            </a>
           </li>
         </ul>
         <ul
@@ -108,7 +117,7 @@ export default function Menu(props) {
         >
           {PoetryList.map(pub => {
             return (
-              <li key={pub.name}>
+              <li key={pub.name} onClick={e => e.stopPropagation()}>
                 <a href={pub.link} target="_blank" rel="noopener noreferrer">
                   {pub.name}
                 </a>
