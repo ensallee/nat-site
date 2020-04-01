@@ -4,10 +4,11 @@
   flex-direction: column;
   text-align: center;
   margin: 30px 0 0 0;
+  font-family: "Maven Pro", sans-serif;
 }
 
 .natSufrin {
-  font-family: "Abel", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 50px;
   margin-bottom: 20px;
 }
@@ -41,8 +42,9 @@ li a {
   color: black;
 }
 
-li:hover {
-  color: red;
+li:hover,
+li a:hover {
+  color: #7a7a7a;
 }
 
 li:not(:first-child) {
@@ -52,7 +54,7 @@ li:not(:first-child) {
 li:not(:first-child)::before {
   content: "";
   height: 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(180, 152, 167);
   margin-right: 10px;
 }
 
@@ -66,33 +68,11 @@ li:not(:first-child)::before {
     margin: 0;
   }
 
+  .natSufrin {
+    font-size: 70px;
+  }
+
   .menu {
     width: 75%;
-    text-align: right;
-  }
-
-  .mainListContainer {
-    text-align: right;
-  }
-
-  .poetryContainer {
-    position: relative;
-    padding: 10px 0 10px 15px;
-  }
-
-  li {
-    display: block;
-    margin: 15px 0;
-  }
-
-  li:not(:first-child) {
-    margin-left: 0;
-  }
-
-  li:not(:first-child)::before {
-    content: "";
-    height: 0;
-    border: none;
-    margin-right: 0;
   }
 }
