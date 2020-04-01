@@ -42,52 +42,58 @@ export default function Menu(props) {
   const { setSelected } = props
 
   return (
-    <div className={style.menu}>
-      <h1 className={style.natSufrin}>Nat Sufrin</h1>
-      <ul className={style.mainListContainer}>
-        <li
-          onClick={() => setPoetryVisible(!poetryVisible)}
-          onMouseEnter={() => setSelected("Poetry")}
-          onMouseLeave={() => setSelected("Default")}
-        >
-          Poetry
-          <ul
-            className={classnames(
-              style.poetryContainer,
-              poetryVisible && style.visible
-            )}
+    <div className={style.flexContainer}>
+      <div className={style.menu}>
+        <h1 className={style.natSufrin}>Nat Sufrin</h1>
+        <ul className={style.mainListContainer}>
+          <li
+            onClick={() => setPoetryVisible(!poetryVisible)}
+            onMouseEnter={() => setSelected("Poetry")}
+            onMouseLeave={() => setSelected("Default")}
           >
-            {PoetryList.map(pub => {
-              return (
-                <li>
-                  <a href={pub.link} target="_blank" rel="noopener noreferrer">
-                    {pub.name}
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        </li>
-        <li
-          onClick={() => setPsychVisible(true)}
-          onMouseEnter={() => setSelected("Psychology")}
-          onMouseLeave={() => setSelected("Default")}
-        >
-          Psychology
-        </li>
-        <li
-          onMouseEnter={() => setSelected("C.V.")}
-          onMouseLeave={() => setSelected("Default")}
-        >
-          C.V.
-        </li>
-        <li
-          onMouseEnter={() => setSelected("Contact")}
-          onMouseLeave={() => setSelected("Default")}
-        >
-          Contact
-        </li>
-      </ul>
+            Poetry
+            <ul
+              className={classnames(
+                style.poetryContainer,
+                poetryVisible && style.visible
+              )}
+            >
+              {PoetryList.map(pub => {
+                return (
+                  <li>
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {pub.name}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </li>
+          <li
+            onClick={() => setPsychVisible(true)}
+            onMouseEnter={() => setSelected("Psychology")}
+            onMouseLeave={() => setSelected("Default")}
+          >
+            Psychology
+          </li>
+          <li
+            onMouseEnter={() => setSelected("C.V.")}
+            onMouseLeave={() => setSelected("Default")}
+          >
+            C.V.
+          </li>
+          <li
+            onMouseEnter={() => setSelected("Contact")}
+            onMouseLeave={() => setSelected("Default")}
+          >
+            Contact
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }

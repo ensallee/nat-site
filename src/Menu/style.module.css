@@ -1,4 +1,4 @@
-.menu {
+.flexContainer {
   height: 25vh;
   display: flex;
   flex-direction: column;
@@ -57,12 +57,22 @@ li:not(:first-child)::before {
 }
 
 @media (min-width: 768px) {
-  .menu {
+  .flexContainer {
     height: 100vh;
-    min-width: 25vw;
-    display: block;
-    text-align: left;
-    margin: 20px 0 0 25px;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .menu {
+    width: 75%;
+    text-align: right;
+  }
+
+  .mainListContainer {
+    text-align: right;
   }
 
   .poetryContainer {
@@ -72,7 +82,6 @@ li:not(:first-child)::before {
 
   li {
     display: block;
-    text-align: left;
     margin: 15px 0;
   }
 
