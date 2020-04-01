@@ -4,20 +4,22 @@
 }
 
 .imageContainer img {
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .galleryContainer {
-    width: 75vw;
+    width: 50vw;
     max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .imageContainer {
     width: 75%;
-    max-height: 100%;
-    margin: 0 auto;
+    max-height: 95%;
   }
 }
