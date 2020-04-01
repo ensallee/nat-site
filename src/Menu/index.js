@@ -97,7 +97,7 @@ export default function Menu(props) {
         >
           {PoetryList.map(pub => {
             return (
-              <li>
+              <li key={pub.name}>
                 <a href={pub.link} target="_blank" rel="noopener noreferrer">
                   {pub.name}
                 </a>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
+import classnames from "classnames"
 import whiteBuilding from "../media/white_building.JPG"
-import candyAndFlowers from "../media/candy_and_flowers.JPG"
 import screamingToast from "../media/screaming_toast.JPG"
 import TV from "../media/tv.JPG"
 import accessories from "../media/accessories.JPG"
@@ -30,7 +30,7 @@ export default function Gallery(props) {
     <div className={style.galleryContainer}>
       <div className={style.imageContainer}>
         <img
-          className={isNewImage && style.fade}
+          className={classnames(isNewImage && style.fade)}
           onAnimationEnd={() => setIsNewImage(false)}
           src={imgPath}
           alt="Nat Sufrin iPhone Photograph"
