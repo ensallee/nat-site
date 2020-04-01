@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/nat-site/static/css/main.a4e63472.chunk.css",
+    "main.js": "/nat-site/static/js/main.f4988574.chunk.js",
+    "main.js.map": "/nat-site/static/js/main.f4988574.chunk.js.map",
+    "runtime-main.js": "/nat-site/static/js/runtime-main.8da81790.js",
+    "runtime-main.js.map": "/nat-site/static/js/runtime-main.8da81790.js.map",
+    "static/js/2.d1ecbcd4.chunk.js": "/nat-site/static/js/2.d1ecbcd4.chunk.js",
+    "static/js/2.d1ecbcd4.chunk.js.map": "/nat-site/static/js/2.d1ecbcd4.chunk.js.map",
+    "index.html": "/nat-site/index.html",
+    "precache-manifest.b4ca0d1cb4f305e35f1fd9c18d63de11.js": "/nat-site/precache-manifest.b4ca0d1cb4f305e35f1fd9c18d63de11.js",
+    "service-worker.js": "/nat-site/service-worker.js",
+    "static/css/main.a4e63472.chunk.css.map": "/nat-site/static/css/main.a4e63472.chunk.css.map",
+    "static/js/2.d1ecbcd4.chunk.js.LICENSE.txt": "/nat-site/static/js/2.d1ecbcd4.chunk.js.LICENSE.txt",
+    "static/media/accessories.JPG": "/nat-site/static/media/accessories.826f5d13.JPG",
+    "static/media/candy_and_flowers.JPG": "/nat-site/static/media/candy_and_flowers.e6097c22.JPG",
+    "static/media/nat.JPG": "/nat-site/static/media/nat.65d5df03.JPG",
+    "static/media/screaming_toast.JPG": "/nat-site/static/media/screaming_toast.5157d52a.JPG",
+    "static/media/tv.JPG": "/nat-site/static/media/tv.fdaacc63.JPG",
+    "static/media/white_building.JPG": "/nat-site/static/media/white_building.087ac035.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8da81790.js",
+    "static/js/2.d1ecbcd4.chunk.js",
+    "static/css/main.a4e63472.chunk.css",
+    "static/js/main.f4988574.chunk.js"
+  ]
+}
