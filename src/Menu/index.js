@@ -59,6 +59,17 @@ export default function Menu(props) {
             }
             onMouseLeave={e => handleSelection(e, "Default", setSelected)}
           >
+            About
+          </li>
+          <li
+            onClick={e =>
+              handleSelection(e, e.target.innerText, setVisibleItem)
+            }
+            onMouseEnter={e =>
+              handleSelection(e, e.target.innerText, setSelected)
+            }
+            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
+          >
             Poetry
           </li>
           <li
@@ -105,6 +116,18 @@ export default function Menu(props) {
             )
           })}
         </ul>
+        <div
+          className={classnames(
+            style.aboutContainer,
+            visibleItem === "About" && style.visible
+          )}
+        >
+          <p>
+            Nat Sufrin is a doctoral candidate in Clincial Psychology at The
+            City College of New York. He is also a practicing poet and iPhone
+            photography enthusiast. He lives in Brooklyn.
+          </p>
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import classnames from "classnames"
+import candy_and_flowers from "../media/candy_and_flowers.JPG"
 import whiteBuilding from "../media/white_building.JPG"
 import screamingToast from "../media/screaming_toast.JPG"
 import TV from "../media/tv.JPG"
@@ -9,6 +10,7 @@ import style from "./style.module.css"
 
 const ImageMap = {
   Default: nat,
+  About: candy_and_flowers,
   Poetry: whiteBuilding,
   Psychology: screamingToast,
   "C.V.": TV,
