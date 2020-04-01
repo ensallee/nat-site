@@ -3,6 +3,10 @@
   height: 100vw;
 }
 
+.fade {
+  animation: fadeIn ease-in 0.25s;
+}
+
 .imageContainer img {
   object-fit: contain;
   height: 100%;
@@ -21,5 +25,14 @@
   .imageContainer {
     width: 75%;
     max-height: 95%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

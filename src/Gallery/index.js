@@ -15,18 +15,25 @@ const ImageMap = {
 }
 
 export default function Gallery(props) {
-  const { selected } = props
-
   const [imgPath, setImgPath] = useState()
+  const [isNewImage, setIsNewImage] = useState(false)
+
+  const { selected } = props
 
   useEffect(() => {
     setImgPath(ImageMap[selected])
+    setIsNewImage(true)
   }, [selected])
 
   return (
     <div className={style.galleryContainer}>
       <div className={style.imageContainer}>
-        <img src={imgPath} alt="Nat Sufrin Photograph" />
+        <img
+          className={isNewImage && style.fade}
+          onAnimationEnd={() => setIsNewImage(false)}
+          src={imgPath}
+          alt="Nat Sufrin iPhone Photograph"
+        />
       </div>
     </div>
   )
