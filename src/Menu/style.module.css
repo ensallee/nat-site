@@ -7,6 +7,10 @@
   font-family: "Maven Pro", sans-serif;
 }
 
+.menu {
+  position: relative;
+}
+
 .natSufrin {
   font-family: "Oswald", sans-serif;
   font-size: 50px;
@@ -33,7 +37,7 @@
 }
 
 li {
-  display: inline;
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -51,11 +55,11 @@ li:not(:first-child) {
   margin-left: 10px;
 }
 
-li:not(:first-child)::before {
+li:not(:last-child)::after {
   content: "";
   height: 20px;
   border: 1px solid rgb(180, 152, 167);
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 @media (min-width: 768px) {

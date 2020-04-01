@@ -88,22 +88,22 @@ export default function Menu(props) {
           >
             Contact
           </li>
-          <ul
-            className={classnames(
-              style.poetryContainer,
-              visibleItem === "Poetry" && style.visible
-            )}
-          >
-            {PoetryList.map(pub => {
-              return (
-                <li>
-                  <a href={pub.link} target="_blank" rel="noopener noreferrer">
-                    {pub.name}
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
+        </ul>
+        <ul
+          className={classnames(
+            style.poetryContainer,
+            visibleItem === "Poetry" && style.visible
+          )}
+        >
+          {PoetryList.map(pub => {
+            return (
+              <li>
+                <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                  {pub.name}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </div>
