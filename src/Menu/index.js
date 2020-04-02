@@ -76,6 +76,7 @@ export default function Menu(props) {
           </li>
           <li
             className={classnames(selected === "C.V." && style.selected)}
+            onClick={e => handleSelection(e)}
             onMouseEnter={e => setHovered(e.target.innerText)}
             onMouseLeave={e => setHovered(null)}
           >
@@ -83,6 +84,7 @@ export default function Menu(props) {
           </li>
           <li
             className={classnames(selected === "Contact" && style.selected)}
+            onClick={e => handleSelection(e)}
             onMouseEnter={e => setHovered(e.target.innerText)}
             onMouseLeave={e => setHovered(null)}
           >
