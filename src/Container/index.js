@@ -8,7 +8,7 @@ export default function Container() {
   const [hovered, setHovered] = useState(null)
 
   return (
-    <div className={style.mainContainer}>
+    <div className={style.mainContainer} onClick={() => setSelected(null)}>
       <Menu
         setSelected={setSelected}
         setHovered={setHovered}

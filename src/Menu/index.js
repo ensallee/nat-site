@@ -46,7 +46,7 @@ export default function Menu(props) {
   }
 
   return (
-    <div className={style.flexContainer} onClick={() => setSelected(null)}>
+    <div className={style.flexContainer}>
       <div className={style.menu}>
         <h1 className={style.natSufrin}>nat sufrin</h1>
         <ul className={style.mainListContainer}>

@@ -38,6 +38,7 @@ export default function Gallery(props) {
     <div className={style.galleryContainer}>
       <div className={style.imageContainer}>
         <img
+          onClick={e => e.stopPropagation()}
           className={classnames(isNewImage && style.fade)}
           onAnimationEnd={() => setIsNewImage(false)}
           src={imgPath}
