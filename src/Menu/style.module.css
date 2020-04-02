@@ -22,6 +22,7 @@
   padding: 0;
   text-align: center;
   position: relative;
+  font-size: 20px;
 }
 
 .poetryContainer,
@@ -31,6 +32,7 @@
   right: 0;
   left: 0;
   padding: 10px 0 0 0;
+  font-size: 15px;
 }
 
 .visible {
@@ -53,7 +55,8 @@ li a {
 }
 
 li:hover,
-li a:hover {
+li a:hover,
+.selected {
   color: #7a7a7a;
 }
 
@@ -79,7 +82,7 @@ li:not(:last-child)::after {
   }
 
   .natSufrin {
-    font-size: 70px;
+    font-size: 90px;
   }
 
   .menu {

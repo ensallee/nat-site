@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import classnames from "classnames"
 import style from "./style.module.css"
 
@@ -35,70 +35,56 @@ const PoetryList = [
 //TODO: psych links
 //TODO: CV
 //TODO: about section
-//TODO: contact
-//TODO: make it so that when you click on a menu item, that photo remains.
 
 export default function Menu(props) {
-  const [visibleItem, setVisibleItem] = useState(null)
+  const { setSelected, setHovered, selected } = props
 
-  const { setSelected } = props
-
-  const handleSelection = (e, value, func) => {
+  const handleSelection = e => {
     e.stopPropagation()
-    func(value)
+    const value = e.target.innerText
+    selected === value ? setSelected(null) : setSelected(value)
   }
 
   return (
-    <div className={style.flexContainer} onClick={() => setVisibleItem(null)}>
+    <div className={style.flexContainer} onClick={() => setSelected(null)}>
       <div className={style.menu}>
         <h1 className={style.natSufrin}>nat sufrin</h1>
         <ul className={style.mainListContainer}>
           <li
-            onClick={e =>
-              handleSelection(e, e.target.innerText, setVisibleItem)
-            }
-            onMouseEnter={e =>
-              handleSelection(e, e.target.innerText, setSelected)
-            }
-            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
+            className={classnames(selected === "About" && style.selected)}
+            onClick={e => handleSelection(e)}
+            onMouseEnter={e => setHovered(e.target.innerText)}
+            onMouseLeave={e => setHovered(null)}
           >
             About
           </li>
           <li
-            onClick={e =>
-              handleSelection(e, e.target.innerText, setVisibleItem)
-            }
-            onMouseEnter={e =>
-              handleSelection(e, e.target.innerText, setSelected)
-            }
-            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
+            className={classnames(selected === "Poetry" && style.selected)}
+            onClick={e => handleSelection(e)}
+            onMouseEnter={e => setHovered(e.target.innerText)}
+            onMouseLeave={e => setHovered(null)}
           >
             Poetry
           </li>
           <li
-            onClick={e =>
-              handleSelection(e, e.target.innerText, setVisibleItem)
-            }
-            onMouseEnter={e =>
-              handleSelection(e, e.target.innerText, setSelected)
-            }
-            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
+            className={classnames(selected === "Psychology" && style.selected)}
+            onClick={e => handleSelection(e)}
+            onMouseEnter={e => setHovered(e.target.innerText)}
+            onMouseLeave={e => setHovered(null)}
           >
             Psychology
           </li>
           <li
-            onMouseEnter={e =>
-              handleSelection(e, e.target.innerText, setSelected)
-            }
-            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
+            className={classnames(selected === "C.V." && style.selected)}
+            onMouseEnter={e => setHovered(e.target.innerText)}
+            onMouseLeave={e => setHovered(null)}
           >
             C.V.
           </li>
           <li
-            onMouseEnter={e =>
-              handleSelection(e, e.target.innerText, setSelected)
-            }
-            onMouseLeave={e => handleSelection(e, "Default", setSelected)}
+            className={classnames(selected === "Contact" && style.selected)}
+            onMouseEnter={e => setHovered(e.target.innerText)}
+            onMouseLeave={e => setHovered(null)}
           >
             <a
               href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=nwsufrin@gmail.com"
@@ -112,7 +98,7 @@ export default function Menu(props) {
         <ul
           className={classnames(
             style.poetryContainer,
-            visibleItem === "Poetry" && style.visible
+            selected === "Poetry" && style.visible
           )}
         >
           {PoetryList.map(pub => {
@@ -128,7 +114,7 @@ export default function Menu(props) {
         <div
           className={classnames(
             style.aboutContainer,
-            visibleItem === "About" && style.visible
+            selected === "About" && style.visible
           )}
         >
           <p>

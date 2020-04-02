@@ -21,12 +21,18 @@ export default function Gallery(props) {
   const [imgPath, setImgPath] = useState()
   const [isNewImage, setIsNewImage] = useState(false)
 
-  const { selected } = props
+  const { selected, hovered } = props
 
   useEffect(() => {
-    setImgPath(ImageMap[selected])
-    setIsNewImage(true)
-  }, [selected])
+    const hasOneValue = selected || hovered
+    const valueToMap = hasOneValue ? (selected ? selected : hovered) : "Default"
+    const isNew = ImageMap[valueToMap] !== imgPath
+
+    if (isNew) {
+      setImgPath(ImageMap[valueToMap])
+      setIsNewImage(true)
+    }
+  }, [selected, hovered])
 
   return (
     <div className={style.galleryContainer}>
