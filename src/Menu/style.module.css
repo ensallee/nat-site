@@ -23,7 +23,7 @@
   padding: 0;
   text-align: center;
   position: relative;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .poetryContainer,
@@ -33,7 +33,7 @@
   right: 0;
   left: 0;
   padding: 10px 0 0 0;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .visible {
@@ -83,10 +83,35 @@ li:not(:last-child)::after {
   }
 
   .natSufrin {
-    font-size: 90px;
+    font-size: 60px;
+  }
+
+  .mainListContainer {
+    font-size: 16px;
+  }
+
+  .poetryContainer,
+  .aboutContainer {
+    font-size: 15px;
   }
 
   .menu {
     width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .natSufrin {
+    font-size: 90px;
+  }
+
+  .mainListContainer {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainListContainer {
+    font-size: 20px;
   }
 }
