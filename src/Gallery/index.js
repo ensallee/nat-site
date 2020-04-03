@@ -12,7 +12,7 @@ const ImageMap = {
   Default: nat,
   About: house,
   Poetry: whiteBuilding,
-  Psychology: screamingToast,
+  "Clinical Research": screamingToast,
   "C.V.": TV,
   Contact: accessories
 }

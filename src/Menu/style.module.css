@@ -27,7 +27,8 @@
 }
 
 .poetryContainer,
-.aboutContainer {
+.aboutContainer,
+.emailContainer {
   display: none;
   position: absolute;
   right: 0;
@@ -91,7 +92,8 @@ li:not(:last-child)::after {
   }
 
   .poetryContainer,
-  .aboutContainer {
+  .aboutContainer,
+  .emailContainer {
     font-size: 15px;
   }
 
