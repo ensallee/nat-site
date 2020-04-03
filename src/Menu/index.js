@@ -42,8 +42,6 @@ const PoetryList = [
   }
 ]
 
-//TODO: psych links
-//TODO: CV
 //TODO: about section
 
 export default function Menu(props) {
@@ -93,7 +91,6 @@ export default function Menu(props) {
           </li>
           <li
             className={classnames(selected === "C.V." && style.selected)}
-            onClick={e => handleSelection(e)}
             onMouseEnter={e => setHovered(e.target.innerText)}
             onMouseLeave={() => setHovered(null)}
           >
