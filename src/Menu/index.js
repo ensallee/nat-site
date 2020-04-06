@@ -42,8 +42,6 @@ const PoetryList = [
   }
 ]
 
-//TODO: about section
-
 export default function Menu(props) {
   const { setSelected, setHovered, selected } = props
 
@@ -75,9 +73,7 @@ export default function Menu(props) {
             Poetry
           </li>
           <li
-            className={classnames(
-              selected === "Clinical Research" && style.selected
-            )}
+            className={classnames(selected === "Research" && style.selected)}
             onMouseEnter={e => setHovered(e.target.innerText)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -86,16 +82,16 @@ export default function Menu(props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Clinical Research
+              Research
             </a>
           </li>
           <li
-            className={classnames(selected === "C.V." && style.selected)}
+            className={classnames(selected === "CV" && style.selected)}
             onMouseEnter={e => setHovered(e.target.innerText)}
             onMouseLeave={() => setHovered(null)}
           >
             <a href={cv} target="_blank" rel="noopener noreferrer">
-              C.V.
+              CV
             </a>
           </li>
           <li
@@ -136,9 +132,9 @@ export default function Menu(props) {
           )}
         >
           <p>
-            Nat Sufrin is a doctoral candidate in Clincial Psychology at The
-            City College of New York. He is also a practicing poet and iPhone
-            photography enthusiast. He lives in Brooklyn.
+            Nat Sufrin is a doctoral candidate in clinical psychology at The
+            City University of New York. He also writes poems and takes photos
+            on his phone.
           </p>
         </div>
         <div
